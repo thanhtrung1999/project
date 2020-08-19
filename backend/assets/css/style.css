@@ -1,0 +1,100 @@
+html, body{
+  font-size: 14px;
+}
+
+.main-header .sidebar-toggle:before {
+  content: "";
+}
+.content-wrap {
+  min-height: 0 !important;
+  overflow: auto;
+}
+.login-box{
+  width: 450px;
+}
+#form-register label span{
+  color: red;
+}
+.btn-insert-variant {
+  border-radius: 100%;
+  background-color: #d90606;
+  color: #f5f5f5;
+  font-weight: bold;
+  padding: 4px 10px;
+}
+.form-group.variant-section{
+  position: relative;
+  border: 1px solid #9f9f9f;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.form-group.variant-section i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px 10px;
+  background-color: black;
+  color: #f5f5f5;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 6px;
+  cursor: pointer;
+}
+.categories-list-table{
+  width: 100%;
+}
+.categories-list-table tr .created-at, .categories-list-table tr .updated-at{
+  width: 15%;
+}
+.filter__form--by-brand-name{
+  position: relative;
+}
+.filter__form--by-brand-name a {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  margin: 0 10px;
+  padding: 4px 10px;
+  background-color: #d2d2d2;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+.filter__form--by-brand-name label{
+  margin-left: 30px;
+}
+.product_list_table{
+  width: 100%;
+}
+.product_list_table tr .category-name{
+  width: 10%;
+}
+.product_list_table tr .product-name{
+  width: 20%;
+}
+.product_list_table tr .action{
+  width: 10%;
+}
+.form-update .variant-block {
+  display: inline-block;
+  padding: 10px;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.form-update .variant-block i {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.brand-list-table tr th:first-child, .brand-list-table tr td:first-child{
+  width: 20%;
+}
+.brands-form .btn-create-brand{
+  color: #f1f1f1;
+}
+.user-list-table tr .action{
+  width: 10%;
+}
