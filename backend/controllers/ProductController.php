@@ -202,6 +202,11 @@ class ProductController extends Controller {
 
     public function update()
     {
+        if(isset($_SESSION['manager']) && $_SESSION['manager']['level'] == 1){
+            $_SESSION['error'] = 'Member không có quyền sửa sản phẩm';
+            header("Location: index.php?controller=product");
+            exit();
+        }
         if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
             $_SESSION['error'] = 'ID không hợp lệ';
             header('Location: index.php?controller=product');
@@ -345,6 +350,11 @@ class ProductController extends Controller {
     }
 
     public function delete() {
+        if(isset($_SESSION['manager']) && $_SESSION['manager']['level'] == 1){
+            $_SESSION['error'] = 'Member không có quyền xóa sản phẩm';
+            header("Location: index.php?controller=product");
+            exit();
+        }
         if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
             $_SESSION['error'] = 'ID không hợp lệ';
             header('Location: index.php?controller=product');
@@ -401,6 +411,11 @@ class ProductController extends Controller {
     }
 
     public function delete_brand(){
+        if(isset($_SESSION['manager']) && $_SESSION['manager']['level'] == 1){
+            $_SESSION['error'] = 'Member không có quyền xóa thương hiệu';
+            header("Location: index.php?controller=category");
+            exit();
+        }
         if(!isset($_GET['brand_id']) || !is_numeric($_GET['brand_id'])){
             $_SESSION['error'] = "ID không hợp lệ";
             header('Location: index.php?controller=product');

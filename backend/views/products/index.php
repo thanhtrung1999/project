@@ -92,10 +92,17 @@ require_once 'helpers/Helper.php';
                     $url_detail = "index.php?controller=product&action=detail&id=" . $product['id'];
                     $url_update = "index.php?controller=product&action=update&id=" . $product['id'];
                     $url_delete = "index.php?controller=product&action=delete&id=" . $product['id'];
+
+                    $disabled_member = '';
+                    if(isset($_SESSION['manager'])){
+                        if($_SESSION['manager']['level'] == 1){
+                            $disabled_member = 'class="hidden"';
+                        }
+                    }
                     ?>
                     <a title="Chi tiết" href="<?php echo $url_detail ?>"><i class="fa fa-eye"></i></a> &nbsp;&nbsp;
-                    <a title="Update" href="<?php echo $url_update ?>"><i class="fa fa-pencil-alt"></i></a> &nbsp;&nbsp;
-                    <a title="Xóa" href="<?php echo $url_delete ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm <?= $product['name']?> không?')"><i
+                    <a <?= $disabled_member?> title="Update" href="<?php echo $url_update ?>"><i class="fa fa-pencil-alt"></i></a> &nbsp;&nbsp;
+                    <a <?= $disabled_member?> title="Xóa" href="<?php echo $url_delete ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm <?= $product['name']?> không?')"><i
                                 class="fa fa-trash"></i></a>
                 </td>
             </tr>

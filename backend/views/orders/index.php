@@ -78,10 +78,17 @@
                     <?php
                     $url_delete = "index.php?controller=order&action=delete&id=".$order['id'];
                     $url_handle = "index.php?controller=order&action=handle&order_id=".$order['id'];
+
+                    $disabled_member = '';
+                    if (isset($_SESSION['manager'])) {
+                        if ($_SESSION['manager']['level'] == 1) {
+                            $disabled_member = 'class="hidden"';
+                        }
+                    }
                     ?>
                     <td>
                         <a href="<?= $url_handle?>" class="btn btn-outline-info btn__handle-orders" <?= $disabled_button?>>Xử lý</a>
-                        <a title="Xóa đơn hàng" href="<?= $url_delete?>" onclick="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này?')"><i
+                        <a <?= $disabled_member?> title="Xóa đơn hàng" href="<?= $url_delete?>" onclick="return confirm('Bạn có chắc chắn muốn xóa đơn hàng này?')"><i
                                     class="fa fa-trash"></i></a>
                     </td>
                 </tr>

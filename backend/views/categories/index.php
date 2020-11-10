@@ -63,17 +63,25 @@
                 }
                 ?>
               </td>
+              <?php
+              $disabled_member = '';
+              if(isset($_SESSION['manager'])){
+                  if($_SESSION['manager']['level'] == 1){
+                      $disabled_member = 'class="hidden"';
+                  }
+              }
+              ?>
               <td>
                   <a href="index.php?controller=category&action=detail&id=<?php echo $category['id'] ?>"
                      title="Chi tiết">
                       <i class="fa fa-eye"></i>
                   </a>
                   &nbsp;&nbsp;
-                  <a href="index.php?controller=category&action=update&id=<?php echo $category['id'] ?>" title="Sửa">
+                  <a <?= $disabled_member?> href="index.php?controller=category&action=update&id=<?php echo $category['id'] ?>" title="Sửa">
                       <i class="fa fa-pencil-alt"></i>
                   </a>
                   &nbsp;&nbsp;
-                  <a href="index.php?controller=category&action=delete&id=<?php echo $category['id'] ?>" title="Xóa"
+                  <a <?= $disabled_member?> href="index.php?controller=category&action=delete&id=<?php echo $category['id'] ?>" title="Xóa"
                      onclick="return confirm('Xóa danh mục đồng nghĩa với việc xóa tất cả những sản phẩm thuộc danh mục. Bạn có chắc chắn muốn xóa không?')">
                       <i class="fa fa-trash"></i>
                   </a>

@@ -70,6 +70,11 @@ class SlideController extends Controller {
     }
 
     public function update(){
+        if(isset($_SESSION['manager']) && $_SESSION['manager']['level'] == 1){
+            $_SESSION['error'] = 'Member không có quyền sửa banner';
+            header("Location: index.php?controller=slide");
+            exit();
+        }
         if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
             $_SESSION['error'] = 'ID category không hợp lệ';
             header('Location: index.php?controller=slide');
@@ -134,6 +139,11 @@ class SlideController extends Controller {
     }
 
     public function delete(){
+        if(isset($_SESSION['manager']) && $_SESSION['manager']['level'] == 1){
+            $_SESSION['error'] = 'Member không có quyền xóa banner';
+            header("Location: index.php?controller=slide");
+            exit();
+        }
         if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
             $_SESSION['error'] = 'ID không hợp lệ';
             header('Location: index.php?controller=slide&action=index');

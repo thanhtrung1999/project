@@ -30,9 +30,16 @@
                     <?php
                     $url_update = "index.php?controller=slide&action=update&id=" . $slide['id'];
                     $url_delete = "index.php?controller=slide&action=delete&id=" . $slide['id'];
+
+                    $disabled_member = '';
+                    if(isset($_SESSION['manager'])){
+                        if($_SESSION['manager']['level'] == 1){
+                            $disabled_member = 'class="hidden"';
+                        }
+                    }
                     ?>
-                    <a title="Update" href="<?php echo $url_update ?>"><i class="fa fa-pencil-alt"></i></a> &nbsp;&nbsp;
-                    <a title="Xóa" href="<?php echo $url_delete ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa slide này không?')"><i
+                    <a <?= $disabled_member?> title="Update" href="<?php echo $url_update ?>"><i class="fa fa-pencil-alt"></i></a> &nbsp;&nbsp;
+                    <a <?= $disabled_member?> title="Xóa" href="<?php echo $url_delete ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa slide này không?')"><i
                             class="fa fa-trash"></i></a>
                 </td>
             </tr>
