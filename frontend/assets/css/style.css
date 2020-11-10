@@ -461,7 +461,7 @@ html body .section-main .section-main__content .product-detail .product-detail__
 }
 html body .section-main .section-main__content .product-detail .product-detail__content .product-detail__main .content .form-payment .btn--add-to-cart {
   padding: 0.65rem 1.25rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   color: #097651;
@@ -471,7 +471,7 @@ html body .section-main .section-main__content .product-detail .product-detail__
 }
 html body .section-main .section-main__content .product-detail .product-detail__content .product-detail__main .content .form-payment .btn--buy-now {
   padding: 0.65rem 1.25rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   color: #f1f1f1;
@@ -556,7 +556,7 @@ html body .section-main .section-main__content .products-cart .products-cart__co
 }
 html body .section-main .section-main__content .products-cart .products-cart__content .cart-form .cart-form__button .btn__shopping-continue {
   padding: 0.65rem 1.25rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   border: 2px solid #095d40;
@@ -565,7 +565,7 @@ html body .section-main .section-main__content .products-cart .products-cart__co
 }
 html body .section-main .section-main__content .products-cart .products-cart__content .cart-form .cart-form__button .btn__payment {
   padding: 0.65rem 1.25rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   background-color: #095d40;
@@ -594,7 +594,7 @@ html body .section-main .section-main__content .checkout .checkout__content .che
 }
 html body .section-main .section-main__content .checkout .checkout__content .checkout__content__main > .contact-info .btn-record .btn-order {
   padding: 0.65rem 1.25rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   background-color: #097651;
@@ -856,7 +856,7 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
     padding: 0;
     position: relative;
     top: 0;
-    margin-top: 3.3rem;
+    margin-top: 3.5rem;
   }
   html body .section-header .section-header__top .inner__item--left .header-logo {
     text-align: center;
@@ -880,7 +880,7 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
     z-index: 999;
     width: 100%;
     border-bottom: 1px solid;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   html body .section-header #mobile-nav button.menu-toggle {
     background: none;
@@ -940,13 +940,17 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
     transition: all 600ms ease-in;
   }
   html body .section-error {
-    padding-top: 16.3rem;
+    padding-top: 16.5rem;
   }
   html body .section-main .section-main__content {
     padding-top: 2rem;
   }
   html body .section-main .section-main__content section.slides .slides__elem .slide-item__image {
     height: 15rem !important;
+  }
+  html body .section-main .section-main__content .categories .introduce-title {
+    font-size: 2.4rem;
+    font-weight: 800 !important;
   }
   html body .section-main .section-main__content .categories .categories__block .category {
     margin-bottom: 1.5rem;
@@ -957,24 +961,34 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
   }
   html body .section-main .section-main__content .categories .categories__block .category .category__name {
     text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
   }
   html body .section-main .section-main__content .line {
     margin-bottom: 3.5rem !important;
   }
   html body .section-main .section-main__content .list--products .categories-brands .categories-brands__name {
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
+    font-weight: 600;
   }
   html body .section-main .section-main__content .list--products .categories-brands .categories-brands__name:after {
     width: 60% !important;
   }
   html body .section-main .section-main__content .list--products .categories-brands .categories-brands__elem .product-item .product-item__name {
     text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
   }
   html body .section-main .section-main__content .list--products .categories-brands .categories-brands__elem .product-item:nth-child(3), html body .section-main .section-main__content .list--products .categories-brands .categories-brands__elem .product-item:nth-child(4) {
     display: none;
   }
+  html body .section-main .section-main__content .list--products .categories-brands .more-product .more-product__link {
+    font-size: 1.1rem;
+    padding: 0.8rem 8rem !important;
+  }
   html body .section-main .section-main__content .list--products > h2 {
     font-size: 2rem;
+    font-weight: 600;
   }
   html body .section-main .section-main__content .list--products .products--by-price-range {
     margin-bottom: 3.5rem;
@@ -986,17 +1000,54 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
   html body .section-main .section-main__content .list--products .products--by-price-range .price-range__block .price-range__link.price-range--2-4 p, html body .section-main .section-main__content .list--products .products--by-price-range .price-range__block .price-range--20\+ p {
     margin-top: 1.2rem !important;
   }
+  html body .section-main .section-main__content .product-list .category-name {
+    font-weight: 700;
+  }
+  html body .section-main .section-main__content .product-list .product-content {
+    margin-bottom: 3rem;
+  }
+  html body .section-main .section-main__content .product-list .product-content .product-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  html body .section-main .section-main__content .product-list .product-content .product-price {
+    font-size: 1.6rem;
+  }
   html body .section-main .section-main__content .product-detail .product-detail__image {
     margin-bottom: 4rem;
   }
+  html body .section-main .section-main__content .product-detail .product-detail__main .product-title {
+    font-size: 2.4rem !important;
+  }
+  html body .section-main .section-main__content .product-detail .product-detail__main .product-price {
+    font-size: 2rem !important;
+  }
+  html body .section-main .section-main__content .product-detail .product-detail__main .form-payment .section-product-variants .variant__name {
+    font-size: 1.8rem;
+  }
+  html body .section-main .section-main__content .product-detail .product-detail__main .form-payment .section-product-variants .variant__block {
+    font-size: 1.4rem;
+  }
+  html body .section-main .section-main__content .product-detail .product-detail__main .form-payment .section-product-variants .variant__block label {
+    padding: 0.6rem 1.8rem !important;
+  }
+  html body .section-main .section-main__content .product-detail .product-detail__main .form-payment .btn--add-to-cart {
+    font-size: 1.5rem;
+  }
   html body .section-main .section-main__content .product-detail .product-detail__main .product-description h4 {
-    font-size: 1.75rem !important;
+    font-size: 1.9rem !important;
   }
   html body .section-main .section-main__content .product-detail .product-detail__main .product-description .product-description__content {
-    font-size: 1.1rem !important;
+    font-size: 1.25rem !important;
+  }
+  html body .section-main .section-main__content .products-more h2 {
+    font-size: 1.8rem;
   }
   html body .section-main .section-main__content .products-cart {
     margin-bottom: 2rem;
+  }
+  html body .section-main .section-main__content .products-cart .products-cart__title {
+    font-size: 2.2rem;
   }
   html body .section-main .section-main__content .products-cart .products-cart__content .col-1 {
     padding: 0;
@@ -1034,20 +1085,24 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
   html body .section-main .section-main__content .products-cart .products-cart__content .col-12 {
     padding: 0;
   }
-  html body .section-main .section-main__content .products-cart .cart-form .cart-item__left .product-title p {
+  html body .section-main .section-main__content .products-cart .cart-form .cart-form__content .cart-item__left .product-title p {
     margin-bottom: 0.5rem;
   }
-  html body .section-main .section-main__content .products-cart .cart-form .cart-item__right .product-amount .product-amount__block {
+  html body .section-main .section-main__content .products-cart .cart-form .cart-form__content .cart-item__right .product-amount .product-amount__block {
     justify-content: center !important;
   }
-  html body .section-main .section-main__content .products-cart .cart-form .cart-item__right .product-amount .product-amount__block .product-amount__input {
+  html body .section-main .section-main__content .products-cart .cart-form .cart-form__content .cart-item__right .product-amount .product-amount__block .product-amount__input {
     flex: 0 0 83.333333% !important;
     max-width: 83.333333% !important;
   }
-  html body .section-main .section-main__content .products-cart .cart-form .cart-item__right .product-amount .product-amount__block .product-amount__input::-webkit-inner-spin-button {
+  html body .section-main .section-main__content .products-cart .cart-form .cart-form__content .cart-item__right .product-amount .product-amount__block .product-amount__input::-webkit-inner-spin-button {
     cursor: pointer;
     height: 1.5rem !important;
     width: 2rem !important;
+  }
+  html body .section-main .section-main__content .products-cart .cart-form .cart-form__button a {
+    font-size: 1.3rem;
+    border-width: 0.1rem !important;
   }
   html body .section-main .section-main__content .checkout {
     margin-bottom: 2rem;
@@ -1055,12 +1110,26 @@ html body#userBody .user-section .user-section__main .g10-user .g10-user__block 
   html body .section-main .section-main__content .checkout .checkout__content .contact-info {
     border-right: none !important;
     order: 1;
+    font-size: 1.2rem;
+  }
+  html body .section-main .section-main__content .checkout .checkout__content .contact-info .checkout__title {
+    font-weight: 700;
   }
   html body .section-main .section-main__content .checkout .checkout__content .cart-info {
     margin-bottom: 2rem;
   }
+  html body .section-main .section-main__content .pagination {
+    margin-bottom: 2rem;
+  }
+  html body .section-main .section-main__content .pagination li a {
+    font-size: 1.1rem;
+  }
   html body .section-back-to-top {
     bottom: 5rem !important;
+  }
+  html body .section-back-to-top .btn-back-to-top {
+    width: 3.5rem;
+    height: 3.5rem;
   }
   html body#userBody .user-section__main .g10-user__elem--form {
     order: 1;

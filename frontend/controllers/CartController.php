@@ -72,55 +72,55 @@ class CartController extends Controller {
             }
 //            setcookie('cart', json_encode($_SESSION['cart']), time() + (86400 * 7));
         }
-//        if(isset($_POST['buy_now'])){
-//            $product_id = $_POST['product_id'];
-//
-//            $product_model = new Product();
-//            $product = $product_model->getProductById($product_id);
-//            $product_variants = $product_model->getProductVariantsById($product_id);
-//
-//            $category_model = new Category();
-//            $categories = $category_model->getAllCategories();
-//
-//            if(!empty($product_variants)) {
-//                $product_variant_value = isset($_POST['variant_value']) ? $_POST['variant_value'] : [];
-//                if (empty($product_variant_value)) {
-//                    $_SESSION['error'] = 'Vui lòng chọn màu sản phẩm';
-//                    header("Location: index.php?controller=product&action=detail&category_id=" . $product['category_id'] . "&brand_id=" . $product['brand_id'] . "&product_id=$product_id");
-//                } else {
-//                    $product_buy_now = [];
-//                    foreach ($product_variant_value as $value){
-//                        $product_buy_now[$product_id][$value] = [
-//                            'name' => $product['name'],
-//                            'price' => $product['price'],
-//                            'avatar' => $product['avatar'],
-//                            'amount' => 1
-//                        ];
-//                    }
-//                    $this->content = $this->view('views/checkouts/buy_now.php',[
-//                        'product_buy_now' => $product_buy_now,
-//                        'product_variants' => $product_variants
-//                    ]);
-//                    require_once 'views/layouts/main_checkout.php';
-//                    header("Location: index.php?controller=checkout&action=buy_now");
-//                    exit();
-//                }
-//            } else {
-//                $product_buy_now[$product_id] = [
-//                    'name' => $product['name'],
-//                    'price' => $product['price'],
-//                    'avatar' => $product['avatar'],
-//                    'amount' => 1
-//                ];
-//                $this->content = $this->view('views/checkouts/buy_now.php',[
-//                    'product_buy_now' => $product_buy_now,
-//                    'product_variants' => $product_variants
-//                ]);
-//                require_once 'views/layouts/main_checkout.php';
-//                header("Location: index.php?controller=checkout&action=buy_now");
-//                exit();
-//            }
-//        }
+        /*if(isset($_POST['buy_now'])){
+            $product_id = $_POST['product_id'];
+
+            $product_model = new Product();
+            $product = $product_model->getProductById($product_id);
+            $product_variants = $product_model->getProductVariantsById($product_id);
+
+            $category_model = new Category();
+            $categories = $category_model->getAllCategories();
+
+            if(!empty($product_variants)) {
+                $product_variant_value = isset($_POST['variant_value']) ? $_POST['variant_value'] : [];
+                if (empty($product_variant_value)) {
+                    $_SESSION['error'] = 'Vui lòng chọn màu sản phẩm';
+                    header("Location: index.php?controller=product&action=detail&category_id=" . $product['category_id'] . "&brand_id=" . $product['brand_id'] . "&product_id=$product_id");
+                } else {
+                    $product_buy_now = [];
+                    foreach ($product_variant_value as $value){
+                        $product_buy_now[$product_id][$value] = [
+                            'name' => $product['name'],
+                            'price' => $product['price'],
+                            'avatar' => $product['avatar'],
+                            'amount' => 1
+                        ];
+                    }
+                    $this->content = $this->view('views/checkouts/buy_now.php',[
+                        'product_buy_now' => $product_buy_now,
+                        'product_variants' => $product_variants
+                    ]);
+                    require_once 'views/layouts/main_checkout.php';
+                    header("Location: index.php?controller=checkout&action=buy_now");
+                    exit();
+                }
+            } else {
+                $product_buy_now[$product_id] = [
+                    'name' => $product['name'],
+                    'price' => $product['price'],
+                    'avatar' => $product['avatar'],
+                    'amount' => 1
+                ];
+                $this->content = $this->view('views/checkouts/buy_now.php',[
+                    'product_buy_now' => $product_buy_now,
+                    'product_variants' => $product_variants
+                ]);
+                require_once 'views/layouts/main_checkout.php';
+                header("Location: index.php?controller=checkout&action=buy_now");
+                exit();
+            }
+        }*/
     }
 
     public function index(){

@@ -14,7 +14,7 @@ require_once 'helpers/Helper.php';
             <select name="category_id" id="categories" class="form-control">
                 <option value="0" selected="selected">--Categories--</option>
                 <?php foreach ($categories as $category):
-                    //giữ trạng thái selected của category sau khi chọn dựa vào tham số category_id trên trình duyệt
+
                     $selected = '';
                     if (isset($_GET['category_id']) && $category['id'] == $_GET['category_id']) {
                         $selected = 'selected="selected"';
